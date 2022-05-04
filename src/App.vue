@@ -3,10 +3,20 @@
 </template>
 
 <script>
-
+import EventService from "../services/event.service";
 export default {
   name: 'App',
+
+  data(){
+    return {
+      data : null
+    }
+  },
+  mounted() {
+   this.data = EventService.getAll()
+  }
 }
+
 </script>
 
 <style>
