@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     overflow: hidden;
 }
 
@@ -10,15 +10,16 @@ body{
     border-radius: 0.5rem 0.5rem 0 0;
     @apply border-gray-200;
     @apply bg-white;
+    @apply mt-1;
 
 }
 
-#form .ql-container{
+#form .ql-container {
     border-radius: 0 0 0.5rem 0.5rem;
     @apply border-gray-200;
     @apply bg-white;
 }
 
-#form .ql-editor{
+#form .ql-editor {
     @apply h-24;
 }

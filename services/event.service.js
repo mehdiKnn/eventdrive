@@ -1,24 +1,29 @@
 import api from "./api";
 
-class EventService{
-     getAll(){
-       return api.get("/events").then((response)=>{
-          return response.data
+class EventService {
+    getAll() {
+        return api.get("/events").then((response) => {
+            return response.data
         })
     }
 
-    create(data){
-         return api.post('/events',data).then((response)=>{
-             return response
-         })
+    create(data) {
+        return api.post('/events', data).then((response) => {
+            return response
+        })
     }
 
-    delete(id){
+    delete(id) {
+        return api.delete(`/events/${id}`).then((response) => {
+            return response
+        })
 
-         return api.delete(`/events/${id}`).then((response)=>{
-             return response
-         })
+    }
 
+    update(data) {
+        return api.put(`/events/${data.id}`, data).then((response) => {
+            return response
+        })
     }
 }
 
